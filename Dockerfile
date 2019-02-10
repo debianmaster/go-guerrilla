@@ -1,5 +1,6 @@
 FROM golang AS builder
-WORKDIR /source
+WORKDIR /
+ADD . .
 RUN curl https://glide.sh/get | sh
 RUN apt-get update && apt-get install -y git
 RUN go get github.com/flashmob/go-guerrilla
